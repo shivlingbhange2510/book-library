@@ -6,11 +6,13 @@ import {
 	legacy_createStore as createStore,
 } from "redux";
 import { authReducer } from './reducer/authReducer'
+import { bookReducer } from "./reducer/bookReducer";
 import { thunk } from "redux-thunk";
 
 // export const store = createStore(authReducer, )
 const rootReducer = combineReducers({
 	auth: authReducer,
+	booksList: bookReducer
 	// posts: postReducer,
 });
 export const store = createStore(rootReducer, applyMiddleware(thunk),  

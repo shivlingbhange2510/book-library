@@ -4,6 +4,7 @@ import { SignUp } from './SignUp'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { signout } from '../redux/actions/authAction'
+import { Home } from '../pages/Home'
 
 export const Navbar = () => {
     const state = useSelector((state) => state)
@@ -37,6 +38,13 @@ export const Navbar = () => {
             </div>
             <div>
                 <Link to="/">Dashboard</Link>
+            </div>
+            {/* BookList */}
+           { state?.auth?.user?.email &&  <div>
+                <Link to="/mybooks"> my books</Link>
+            </div>}
+            <div>
+                <Link to="/home">Home</Link>
             </div>
            
 

@@ -9,6 +9,10 @@ import { Route, Routes } from "react-router-dom";
 // import { Login } from './components/Login'
 import { DashBoard } from './components/DashBoard'
 import { Navbar } from './components/Navbar'
+import { Home } from './pages/Home'
+import { BookList } from './components/BookList'
+import { MyBookPage } from './pages/MyBookPage'
+
 function App() {
 
   return (
@@ -19,6 +23,10 @@ function App() {
 				<Route path="/signup" element={<SignUp/>} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/logout" element={<Login />} />
+				<Route path="/home" element={<Home />} />
+        <Route path='/mybooks' element={<MyBookPage/>} />
+
+
 
         {/* logout */}
 		</Routes>
